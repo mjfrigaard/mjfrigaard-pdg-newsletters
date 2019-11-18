@@ -315,7 +315,9 @@ function processTextElement(inSrc, txt) {
 
 3. Click on the **Save** icon (little disk) and name this function **ConvertToMarkdown**  
 
-4. Run the `ConvertToMarkdown` function twice 
+![](gdoc2md-step-01.7.png)
+
+4. Run the `ConvertToMarkdown` function 
 
 ![](gdoc2md-step-02.png)
 
@@ -324,6 +326,8 @@ function processTextElement(inSrc, txt) {
 ![](gdoc2md-step-03.png)  
 
 ![](gdoc2md-step-04.png)
+
+
 
 
 
