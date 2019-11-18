@@ -335,4 +335,17 @@ click 'Allow'
 The documents will be sent to your email
 
 
+To change repo name, use this: 
+
+```bash
+# if you see this
+remote: This repository moved. Please use the new location:
+remote:   https://github.com/mjfrigaard/new-location.git
+
+# use this
+git remote set-url origin https://github.com/mjfrigaard/new-location.git
+
+# with 'new-location' as the name of the new repo location 
+```
+
 
