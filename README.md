@@ -15,11 +15,14 @@ git push -u origin master
 
 To convert the Google doc newsletters to markdown, I use [this script](). 
 
-1. Start by clicking on **Tools** > **New Script**, then delete `myFunction`. 
+## 1. Start by clicking on **Tools** > **New Script**, then delete `myFunction`. 
 
 ![](gdoc2md-step-01.png)
 
-2. Paste the following into the script editor 
+## 2. Paste the following into the script editor 
+
+source: https://github.com/mangini/gdocs2md/blob/master/converttomarkdown.gapps
+
 
 ```go
 /*
@@ -313,21 +316,23 @@ function processTextElement(inSrc, txt) {
 }
 ```
 
-3. Click on the **Save** icon (little disk) and name this function **ConvertToMarkdown**  
+## 3. Click on the **Save** icon (little disk) and name this function **ConvertToMarkdown**  
 
 ![](gdoc2md-step-01.7.png)
 
-4. Run the `ConvertToMarkdown` function 
+## 4. Run the `ConvertToMarkdown` function 
 
 ![](gdoc2md-step-02.png)
 
-5. Allow permissions 
+## 5. Allow permissions 
 
-![](gdoc2md-step-03.png)  
+![](gdoc2md-step-03.png) 
+
+click 'Allow' 
 
 ![](gdoc2md-step-04.png)
 
-
+The documents will be sent to your email
 
 
 
