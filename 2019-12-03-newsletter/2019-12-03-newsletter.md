@@ -25,22 +25,19 @@ If you like what you read, how about clicking the ❤️ up top. We’ll be very
 
 ## Health & Medicine >
 
-# *Wealth has an uneven impact on obesity among men and women *
+# *Wealth has an uneven impact on obesity among men and women*
 
 ![image alt text](image_0.png)
 
 Analysis of longitudinal data by the [National Institutes of Health](https://www.nih.gov/) showed that obesity among middle-aged  men was not related to net worth. This net worth-obesity association was statistically significant for women such that greater net worth was associated with a lower risk of obesity. The main driver of net worth was home value. Despite the growing trend of [single female home ownership](https://www.lendingtree.com/home/mortgage/homeownership-gender-gap-study/) outpacing single men, women may have been more severely impacted by the foreclosure crisis because entry level homes were impacted the most.
 
-*Of all the homes foreclosed upon nationwide between January 2007 and December 2015,**[[2*]](https://www.zillow.com/research/housing-bust-wealth-gap-21543/#_ftn2)* 45.4 *
-
-*percent were in the bottom third of all homes in terms of value, compared with just 16.9 percent that were high-end.*
+*Of all the homes foreclosed upon nationwide between January 2007 and December 2015, [[2]](https://www.zillow.com/research/housing-bust-wealth-gap-21543/#_ftn2) percent were in the bottom third of all homes in terms of value, compared with just 16.9 percent that were high-end.*
 
 Foreclosures and the loss of value from the peak of the market could have impacted women more broadly simply by the fact that they are more likely to be single homeowners compared with single men. The study of 6,979 respondents did not break out the impact of wealth on obesity by single versus married but the economic events can pose their own independent effects based upon where men and women had invested.
 
 source: [Wealth and Obesity Among US Adults Entering Midlife](https://onlinelibrary.wiley.com/doi/abs/10.1002/oby.22625) 
 
 * * *
-
 
 ## Science >
 
@@ -105,25 +102,35 @@ Source: [Consumer and Community Context, November 2019](https://www.federalreser
 
 ![image alt text](image_3.png)
 
-<table>
-  <tr>
-    <td># load libraries and connection to Prestolibrary(RPresto)library(DBI)library(dplyr)library(ggplot2)conn.presto <- dbConnect(RPresto::Presto(), 
+
+```r
+# load libraries and connection to Presto
+library(RPresto)
+library(DBI)
+library(dplyr)
+library(ggplot2)
+conn.presto <- dbConnect(RPresto::Presto(), 
                               host = "http://...", 
                               port = 80, 
                               user = "username", 
                               schema = "redshift" , 
-                              catalog = "hive")# load database queryqry <- "SELECT  * FROM tablename LIMIT 100" # get dataDBI::dbGetQuery(conn.presto, qry) %>% 
+                              catalog = "hive")
+# load database query
+qry <- "SELECT  * FROM tablename LIMIT 100" 
+# get data
+DBI::dbGetQuery(conn.presto, qry) %>% 
                    tibble::as_tibble() -> dataset</td>
-  </tr>
-</table>
+```
 
 
-**Source: ****[Setup a database connection in RStudi**o](https://www.tidyverse.org/blog/2019/12/odbc-1-2-0/)
+**Source:** [Setup a database connection in RStudio](https://www.tidyverse.org/blog/2019/12/odbc-1-2-0/)
 
-* * *
+***
 
 
-If you like what you read, how about clicking the ❤️ up top. We’ll be very grateful.* * *
+If you like what you read, how about clicking the ❤️ up top. We’ll be very grateful.
+
+***
 
 
 #### Diagnosing the accuracy of your linear regression in R
